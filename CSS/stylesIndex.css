@@ -1,0 +1,144 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: "Century Gothic", sans-serif;
+  background-color: #000;
+  color: #fff;
+  background-image: url("Images\\Earth.png"); /* 2D изображение планеты */
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  padding: 20px;
+  text-align: center;
+}
+
+header .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40pt;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 10px;
+  color: #000;
+}
+
+/* Настройки контейнера */
+main .main-content {
+  background: rgba(240, 240, 240, 0.85);
+  padding-top: 54px;
+  padding-left: 47px;
+  padding-right: 47px;
+  border-radius: 100px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.hero, .about, .blockSelect {
+  font-family: 'Century', sans-serif;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 24pt;
+}
+
+section p {
+  font-size: 18pt;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/*Настройка расположения контейнеров с ссылками*/
+section .blockSelect {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section .block {
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  /*Настройка отступов в контейнере*/
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  margin-right: 48px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  /*Конец настройки отступов*/
+  border: 1px black solid;
+  box-sizing: border-box;
+}
+
+section .block img {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+section .block p {
+  margin-top: 10px;
+  font-size: 20pt;
+  color: #000;
+}
+
+section .block a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 24pt;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  main .main-content {
+    padding: 15px;
+  }
+
+  footer ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  section .block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

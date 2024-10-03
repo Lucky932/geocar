@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoCar</title>
+    <link rel="stylesheet" href="CSS/stylesIndex.css" />
+    <script src="JS/jquery-3.7.1.min.js" async></script>
+  </head>
+  <body>
+    <!--Заголовок-->
+    <header>
+      <div class="header-content"> <h1>GeoCar</h1> </div>
+    </header>
+    <main>
+      <div class="main-content">
+        <!--Отдел приветствия-->
+        <section class="hero">
+          <h2>Добро пожаловать в GeoCar</h2>
+          <p>Исследуйте географические карты стран Беларуси, России, Казахстана и
+            узнайте больше о регионах и автомобильных номерах. </p>
+        </section>
+        <!--Отдел с описанием проекта-->
+        <section class="about">
+          <h2>О проекте</h2>
+          <p>Данный проект был разработан в целью ознакомления с географической картой Беларуси,
+            России, Казахстана, а также изучением регионов перечисленных стран.</p>
+        </section>
+        <!--Отдел с контейнерами-->
+        <section>
+          <div class="blockSelect">
+            <div class="block">
+              <a href="MapBelarus.html">
+                <img src="CSS/Images/Map_Belarus.jpg" alt="Карта Беларуси">
+                <p>Карта Беларуси</p>
+              </a> </div>
+            <div class="block">
+              <a href="MapRussia.html">
+                <img src="CSS/Images/Map_Russia.jpg" alt="Карта России">
+                <p>Карта России</p>
+              </a> </div>
+            <div class="block">
+              <a href="MapKazahstan.html">
+                <img src="CSS/Images/Map_Kazahstan.jpg" alt="Карта Казахстана">
+                <p>Карта Казахстана</p>
+              </a> </div>
+            <div class="block">
+              <a href="CarNumberplates.html">
+                <img src="CSS/Images/LogoNumberplates.jpg" alt="Автономера">
+                <p>Автономера</p>
+              </a> </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--Подвал-->
+    <footer> <p>2024 GeoCar.</p> <p>Разработал Басюл Г.С.</p> <br /> </footer>
+
+    <script>
+      function initializeJQuery() {
+          $('.block img').hover(
+              function() {
+                  $(this).css('transform', 'scale(1.1)');
+              }, 
+              function() {
+                  $(this).css('transform', 'scale(1)');
+              }
+          );
+      }
+
+      // Проверяем, загрузился ли jQuery, если да - инициализируем
+      if (typeof jQuery === 'undefined') {
+          var checkJQueryInterval = setInterval(function() {
+              if (typeof jQuery !== 'undefined') {
+                  clearInterval(checkJQueryInterval);
+                  initializeJQuery();
+              }
+          }, 100);
+      } else {
+          initializeJQuery();
+      }
+  </script>
+  </body>
+</html>

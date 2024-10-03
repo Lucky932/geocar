@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автономера</title>
+    <link rel="stylesheet" href="CSS/stylesNumplat.css">
+</head>
+<body>
+    <!-- Заголовок -->
+    <header> <h1>GeoCar - Автономера</h1> </header>
+    <!-- Навигационная панель -->
+    <div class="topPanel">
+        <nav>
+            <a href="Index.html">На главную</a>
+            <a href="MapBelarus.html">Карта Беларуси</a>
+            <a href="MapRussia.html">Карта России</a>
+            <a href="MapKazahstan.html">Карта Казахстана</a>
+        </nav>
+    </div>
+    <!-- Основной контент -->
+    <main>
+        <div class="main-content">
+            <select id="country-select" onchange="loadImg()">
+                <option value="">--Выберите страну--</option>
+                <option value="bel">Беларусь</option>
+                <option value="rus">Россия</option>
+                <option value="kaz">Казахстан</option>
+            </select>
+            <!-- Макет для номера -->
+            <canvas id="olp"></canvas>
+            <!-- Панель для выбора симоволов номера -->
+            <div class="panelForSelect"></div>
+            <!-- Контейнер для кнопки -->
+            <div class="placeBttn">
+                <button 
+                    class="bttn" 
+                    onclick="updateForm()">
+                    Создать номер
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- Подвал -->
+    <footer> <p>2024 GeoCar.</p> <p>Разработал Басюл Г.С.</p> <br> </footer>
+
+    <script src="JS/generateNum_script.js"></script>
+</body>
+</html>
